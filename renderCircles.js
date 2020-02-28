@@ -2,11 +2,23 @@
 function renderCircles(circles) {
     // HINT: You probably need to write a for loop!
     //       Or, if you're feeling fancy, use .map() 
-    return `
-        <div class="text-center mt-5">
-            <code>${JSON.stringify(circles)}</code>
-        </div>
-    `
+
+
+    
+    var outputArr = [];
+
+    for (var i=0; i<circles.length; i++) {
+
+        var currCirc = circles[i]
+        var circHTML = `
+        <div style="border-radius:50%; background-color:${currCirc.color}; height:${currCirc.radius}px; width:${currCirc.radius}px;"></div>
+        `
+        outputArr.push(circHTML);
+
+
+    }
+    return outputArr.join('');
+        
 }
 
 function circles() {
