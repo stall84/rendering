@@ -1,9 +1,12 @@
 
 function renderRectangle(rectangle) {
+
+    
+    // pretty simple with this one. no empty array to push into needed & no looping needed for the single instance of rectangle.
     return `
-        <div class="text-center mt-5">
-            <code>${JSON.stringify(rectangle)}</code>
-        </div>
+    <div class = "ml-4 mt-4">
+       <div style="width:${rectangle.width}px; height:${rectangle.height}px; background-color:${rectangle.color};"></div>
+    </div>
     `
 }
 

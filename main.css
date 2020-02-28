@@ -1,1 +1,24 @@
 /* Type whatever CSS you need here! */
+
+/* placeholder for previous exercises done with inline coding */
+
+
+.student-present {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 250px;
+    background-color: #b2ff46;
+    border: 1px solid black;
+}
+
+.student-absent {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 250px;
+    background-color: #ff5d46;
+    border: 1px solid black;
+}
