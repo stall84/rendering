@@ -39,7 +39,7 @@ function renderStudent(student) {
     }
     // now return/create the individual student HTML using the values sorted through above
     return `
-        <div class="${className}>
+        <div class="${className}">
         <h2>${student.name}</h2>
         <h3>${presenceString}</h3>
         </div>
