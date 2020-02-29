@@ -3,10 +3,21 @@ function renderRestaurants(restaurants) {
     // HINT: You can use <img /> tags that point to these playing card images: 
     // https://commons.wikimedia.org/wiki/Category:SVG_playing_cards
     return `
-        <div class="text-center mt-5">
-            <code>${JSON.stringify(restaurants)}</code>
+        <div class="container" id="restaurantBar">
+        <h1>Placeholder</h1>
         </div>
     `
+}
+
+// as in renderStudents we're going to make a separate function which will take each restaurant
+// object and apply the dollar signs equaling the priceRating value. We will use a switch/case statement
+
+function renderRestaurant(restaurant) {
+    switch (restaurant.priceRating) {
+        case 1: 
+            var className = "oneDollar";
+            break;
+    }
 }
 
 function restaurants() {

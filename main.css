@@ -22,3 +22,10 @@
     background-color: #ff5d46;
     border: 1px solid black;
 }
+
+.oneDollar {
+
+    background-image: url("images/dollar.png");
+    width: 25px;
+    height: 25px;
+}
