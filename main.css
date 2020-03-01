@@ -90,3 +90,30 @@ h5 {
 h6 {
     font-size: 15px;
 }
+
+/****************************************************************************************************/
+
+.tweet-holder {
+
+    display: flex;
+
+}
+
+.user-cluster {
+
+    display: flex;
+}
+
+.veri-check {
+
+    width: 20px;
+    height: 20px;
+
+}
+
+.prof-pics {
+
+    width: 40px;
+    height: 40px;
+
+}
