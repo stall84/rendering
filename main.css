@@ -51,11 +51,12 @@
 /* For renderMovies .. Was attempting to use flex and class of 'titleholder' to get the title and release date joined together closer
 .. in the interest of time, moving on. */
 
-/* had issue with getting moive-holder containing div to not stretch to width of screen on larger screent */
+
 .movie-holder {
 
     background-color: #b7b7b7;
     display: flex;
+    width: max-content;
     flex-direction: row;
     margin: 1.5em;
 }
@@ -75,9 +76,9 @@
 
     display: inline-flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: #dcdcdc;
-    margin: 1.2em;
+    margin: 1.1em;
     padding: 1em;
 }
 
