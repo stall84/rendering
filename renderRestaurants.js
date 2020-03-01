@@ -1,24 +1,38 @@
 
+debugger;
+
 function renderRestaurants(restaurants) {
-    // HINT: You can use <img /> tags that point to these playing card images: 
-    // https://commons.wikimedia.org/wiki/Category:SVG_playing_cards
+    // first create variable to hold the final HTML assembly of 2nd function and current function that will return the 
+    // array of html formatted objects from original restaurants function at bottom
+    var restaurantHTML = restaurants.map(renderRestaurant).join('');
+
     return `
-        <div class="container" id="restaurantBar">
-        <h1>Placeholder</h1>
+        <div id="restaurant-holder">
+           ${restaurantHTML}
         </div>
     `
+
 }
 
-// as in renderStudents we're going to make a separate function which will take each restaurant
-// object and apply the dollar signs equaling the priceRating value. We will use a switch/case statement
+
+// Will create a secondary function to render each individual restaurants html with dollarsign styling
 
 function renderRestaurant(restaurant) {
-    switch (restaurant.priceRating) {
-        case 1: 
-            var className = "oneDollar";
-            break;
-    }
+
+    return `
+        <!-- Will use a rounded bootstrap class for styling of restaurant divs -->
+        <div class="rounded rest-holder">
+            <h2>${restaurant.name}</h2>
+            <h3>${restaurant.type}</h3>
+            <!-- Using the special string repeat method we will simply use an ordinary dollar sign with a styling class (green color) -->
+            <!-- we will set up in the CSS file.. calling the priceRating value in the repeat method Luckily there can be no fewer than 1 dollarsign -->
+            <div class="dollar-line">${'$'.repeat(restaurant.priceRating)}</div>
+        </div>
+    `
+
 }
+
+
 
 function restaurants() {
     var content = document.getElementById('content');

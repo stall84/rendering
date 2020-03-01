@@ -1,8 +1,25 @@
+// Continuing with the same logic we've used before I'll create at least one other function to map later on that will go through each movie object individually
+// and create the HTML code needed to render it 
+
 
 function renderMovies(movies) {
+
+    var finalHTML = movies.map(renderEach);
+
     return `
-        <div class="text-center mt-5">
-            <code>${JSON.stringify(movies)}</code>
+        <div class="text-center container mt-5">
+            ${finalHTML}
+        </div>
+    `
+}
+
+function renderEach(flicks) {
+
+    return `
+        <div class="movie-holder">
+            <div>
+            <img src="${flicks.poster}">
+            </div
         </div>
     `
 }
