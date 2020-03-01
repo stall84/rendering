@@ -47,3 +47,45 @@
     background-color: #dfdfdf;
 
 }
+
+/* For renderMovies .. Was attempting to use flex and class of 'titleholder' to get the title and release date joined together closer
+.. in the interest of time, moving on. */
+
+/* had issue with getting moive-holder containing div to not stretch to width of screen on larger screent */
+.movie-holder {
+
+    background-color: #b7b7b7;
+    display: flex;
+    flex-direction: row;
+    margin: 1.5em;
+}
+
+.poster-holder {
+
+    margin: 1.2em;
+}
+
+/* not completely sure of this negative margin.. trying to close gap between title and date*/
+.title-holder {
+
+    margin-bottom: -1em;
+}
+
+.movie-data {
+
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #dcdcdc;
+    margin: 1.2em;
+    padding: 1em;
+}
+
+h5 {
+    font-size: 22px;
+    font-weight: 50;
+}
+
+h6 {
+    font-size: 15px;
+}

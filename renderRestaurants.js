@@ -1,5 +1,5 @@
 
-debugger;
+
 
 function renderRestaurants(restaurants) {
     // first create variable to hold the final HTML assembly of 2nd function and current function that will return the 

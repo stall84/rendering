@@ -4,22 +4,35 @@
 
 function renderMovies(movies) {
 
-    var finalHTML = movies.map(renderEach);
+    var finalHTML = movies.map(renderEach).join(' ');
 
     return `
-        <div class="text-center container mt-5">
+        <div class="container mb-5">
             ${finalHTML}
         </div>
     `
 }
 
+// ran into some styling gltiches in the css and possibly in way I wrapped divs below. Mainly had problem getting 
+// title of movie and release date to 'stick' together closer. Also the movie-holder div stretches to fit screen.. In interest of time & since I was able to render most of the 
+// problem.. moving on 
+
 function renderEach(flicks) {
 
     return `
-        <div class="movie-holder">
-            <div>
-            <img src="${flicks.poster}">
-            </div
+        
+        <div class="movie-holder rounded">
+            <div class="poster-holder">
+                <img style="height:275px; width:190px;" src="${flicks.poster}">
+            </div>
+            <div class="rounded movie-data">
+                <div class="title-holder">
+                <h2>${flicks.title}</h2>
+                <h6>${flicks.year}</h6>
+                </div>
+                <h5>IMDB:<br>${flicks.imdbRating}/10</h5>
+                <h5>Rotten Tomatoes:<br>${flicks.rottenTomatoesRating*100}%</h5>
+            </div>
         </div>
     `
 }
