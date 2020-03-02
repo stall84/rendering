@@ -7,7 +7,7 @@ function renderTweets(tweets) {
     var tweetsHTML = tweets.map(eachTweet).join('');
 
     return `
-        <div class="container text-center mt-5">
+        <div class="container mt-5">
             ${tweetsHTML}
         </div>
     `
@@ -19,21 +19,41 @@ function eachTweet(twit) {
         var veriCheck = `
         <img class="veri-check" src="images/checkmark.png">
         `
-    };
+    } else { veriCheck = ""};
+    
+    // make variables to store the footer images (likes/retweets,etc)
+    var replyImg = `<img class="footer-png" src="images/reply.png">`;
+    var likesImg = `<img class="footer-png" src="images/likes.png">`;
+    var retwtImg = `<img class="footer-png" src="images/retweet.png">`;
+    var msgImg =   `<img class="footer-png" src="images/message.png">`;
+
     
 // had a pretty slick idea going with the above if-check then veri-check creation. 
 // It kind of works too.. except for the case where user is not verified.. 
 // then it throws up a beautiful "undefined" onto the screen..
 // will try to find solution 
 
+// work-around solution: assign an empty string to veriCheck variable if isVerified condition false 
+
     return `
         <div class="tweet-holder">
             <div class="user-cluster">
                 <img class="prof-pics" src="${twit.user.profilePic}">
                     <div class="name-handle">
-                    <h2>${twit.user.username}</h2>${veriCheck}
-                    <h4>${twit.user.handle}</h4>
+                        <h4>${twit.user.username}${veriCheck}</h2>
+                        <h6>${twit.user.handle}</h4>
                     </div>
+            </div>
+            <div class="tweet-content">
+                <h3>${twit.text}</h3>
+                <hr>
+            </div>
+            
+            <div class="tweet-footer">
+            
+                <ul>
+                    <li>${replyImg}${twit.replies}</li><li>${retwtImg}${twit.retweets}</li><li>${likesImg}${twit.likes}</li><li>${msgImg}</li>
+                </ul>
             </div>
         </div>
     `

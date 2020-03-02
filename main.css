@@ -96,12 +96,16 @@ h6 {
 .tweet-holder {
 
     display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+    border: .25px solid #dfdfdf;
 
 }
 
 .user-cluster {
 
     display: flex;
+    margin: 1em 0 1em .5em;
 }
 
 .veri-check {
@@ -113,7 +117,52 @@ h6 {
 
 .prof-pics {
 
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
 
+}
+
+.name-handle {
+    
+    display: inline-flexbox;
+    margin-left: .5em;
+
+}
+
+.name-handle>h6 {
+
+    color: #b7b7b7;
+}
+
+.tweet-content {
+
+    margin-left: .5em;
+
+}
+
+.tweet-content>hr {
+
+    margin-bottom: .5em;
+}
+
+.tweet-footer {
+
+    display: flex;
+}
+
+.tweet-footer>ul {
+
+    display: inline-flex;
+    list-style: none;
+
+
+}
+.tweet-footer>ul>li {
+    margin: 0 1em 0 1em;
+}
+
+.footer-png {
+    
+    width: 15px;
+    height: 15px;
 }
