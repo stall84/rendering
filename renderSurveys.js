@@ -1,10 +1,23 @@
 
-function renderSurveys(surveys) {
+function renderSurveys (surveys) {
+
+    var surveyHTML = surveys.map(renderSurvey).join('');
+
     return `
         <div class="text-center mt-5">
-            <code>${JSON.stringify(surveys)}</code>
+            ${surveyHTML}
         </div>
     `
+}
+
+// function to render individual surveys
+
+function renderSurvey (survey) {
+
+    return `
+    <div>${survey.title}</div>
+    `
+
 }
 
 function surveys() {
